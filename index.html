@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emerald Games</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Arima:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body o>
+    <div class="loader">
+        <div class="water"></div>
+    </div>
+    <div class="circle1">
+
+    </div>
+    <div class="circle2">
+
+    </div>
+
+    <section class="container-fluid">
+        <div class="dashboard">
+            <div class="user">
+                <img src="./Images/profile (1).png" alt="">
+                <h3>Emmanuel Aderibigbe</h3>
+                <p>Pro Member</p>
+            </div>
+            <div class="links">
+                <div onclick="showStream()" class="link">
+                    <img src="./Images/chat (3).png" alt="">
+                    <h3>Streams</h3>
+                </div>
+                <div onclick="showGameSection()" class="link">
+                    <img src="./Images/steam.png" alt="">
+                    <h3>Games</h3>
+                </div>
+                <div  onclick="openNews()" class="link">
+                    <img src="./Images/joystick.png" alt="">
+                    <h3>News</h3>
+                </div>
+                <div onclick="openCollection()" class="link">
+                    <img src="./Images/library.png" alt="">
+                    <h3>Collections</h3>
+                </div>
+
+            </div>
+            <div id="premium">
+                <img src="./Images/rank.png" alt="">
+                <h3>Join Premium</h3>
+            </div>
+
+
+        </div>
+
+        <div class="Games">
+            <div class="menu">
+                <img onclick="openNav()" style="margin-left: auto;" src="./Images/menu (3).png" alt="">
+
+            </div>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <div class="user">
+                    <img src="./Images/profile (1).png" alt="">
+                    <h3>Emmanuel Aderibigbe</h3>
+                    <p>Pro Member</p>
+                </div>
+                <div class="links">
+                    <div onclick="showStream(); closeNav();" class="link">
+                        <img src="./Images/chat (3).png" alt="">
+                        <h3>Streams</h3>
+                    </div>
+                    <div onclick="showGameSection(); closeNav();" class="link">
+                        <img src="./Images/steam.png" alt="">
+                        <h3>Games</h3>
+                    </div>
+                    <div onclick="openNews(); closeNav();" class="link">
+                        <img src="./Images/joystick.png" alt="">
+                        <h3>News</h3>
+                    </div>
+                    <div onclick="openCollection(); closeNav();" class="link">
+                        <img src="./Images/library.png" alt="">
+                        <h3>Collections</h3>
+                    </div>
+
+                </div>
+                <div id="premium">
+                    <img src="./Images/rank.png" alt="">
+                    <h3>Join Premium</h3>
+                </div>
+
+            </div>
+
+            <div class="Active-games">
+                <div class="status">
+                    <h1>Active Games</h1>
+                    <input type="text">
+                </div>
+
+                <div class="cards">
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/The walking dead.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>The Walking Dead</h2>
+                                <p> The Walking Dead:Empires is a multiplayer survival game set in the treacherous world of AMC's The Walking Dead. Survive in this harsh reality by doing whatever it takes. <span id="1"
+                                        class="more">Read
+                                        more</span>
+                                    <span class="remaining">
+                                        Scavenge for supplies and construct your new home. Team up with allies, compete against maniacal foes, and always beware the dead.
+                                        <span style="margin-left: 5px;" class="less">Show Less</span></span>
+                                </p>
+
+                                <div class="prog">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <h2 class="percentage"></h2>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/Eternal Paradox.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>Eternal Paradox</h2>
+                                <p> Eternal Paradox follows the standard 4X basics: Explore, Exploit, Expand, and Exterminate. One major difference is the addition of RPG-style turn-based combat. <span
+                                        class="more">Read more</span>
+                                    <span class="remaining">
+                                        This blend of two genres makes Eternal Paradox especially interesting. 
+                                        <span style="margin-left: 5px;" class="less">Show
+                                            Less</span></span>
+                                </p>
+
+                                <div class="prog">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <h2 class="percentage"></h2>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/Grit game.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>Grit</h2>
+                                <p>This town ain't big enough for the two of us, and it ain't just the two of us looking for a fight. Ride or die in the ultimate Wild West battle royale, <span class="more">Read
+                                        more</span> <span class="remaining">
+                                        where there's more to winning than aiming true. Saddle up and ride across town, building the best poker hand from found weapons to make a killing. Grab the best shooter to-hand and gun your way to infamy on the new frontier. Explore the towns, oil fields and plains of the untamed west as you try to hitch a ride on the last man alive train. But hold on to your 10 gallon hat - it'll protect you as you're shootin' up a storm! If a gunslinger shoots you down, keep your hat on - a 1v1 Wild West showdown could put you back in the game if you got a quick draw.
+                                        <span style="margin-left: 5px;" class="less">Show Less</span></span>
+                                </p>
+
+                                <div class="prog">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <h2 class="percentage"></h2>
+                        </div>
+                    </div>
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/Battle Star game.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>Battle Star Galatica</h2>
+                                <p>Battlestar Galactica is a MMO 4X strategy game that takes place after The Fall.
+                                    Players
+                                    find themselves scattered throughout the galaxy following the attack from <span
+                                        class="more">Read more</span>
+                                    <span class="remaining">the Cylons with the goal of retaking their home system as a
+                                        surviving member of one of the Twelve Colonies. Rebuild your resources, reunite
+                                        with
+                                        your faction, and reclaim the Twelve Colonies. Humanity's children are returning
+                                        home. So say we all.<span style="margin-left: 5px;" class="less">Show
+                                            Less</span></span>
+                                </p>
+
+                                <div class="prog">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <h2 class="percentage"></h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div onclick="showGame()" class="show-more-games">
+                    <h6>Show More</h6>
+                    <img style="width: 16px; margin-left: 3px; margin-top: 3px;" src="./Images/down-filled-triangular-arrow.png
+                            " alt="">
+                </div>
+
+                <div class="middle">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                    <div class="bar bar3"></div>
+                    <div class="bar bar4"></div>
+                    <div class="bar bar5"></div>
+                    <div class="bar bar6"></div>
+                    <div class="bar bar7"></div>
+                    <div class="bar bar8"></div>
+
+
+                </div>
+
+
+                <div class="more-games">
+                    <div class="cards">
+                        <div class="card" style="width: 24rem;">
+                            <img id="game-pic" src="./Images/Fortitude game.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="card-info">
+                                    <h2>Fortitude </h2>
+                                    <p>Fortitude is a PvP tower defense game set in a dark fantasy world where players
+                                        compete
+                                        against one another to both invade and defend villages. <span class="more">Read
+                                            more</span>
+                                        <span class="remaining">As you build and grow your village, you must craft and
+                                            strategically
+                                            place a variety of defensive structures like cannon towers, arrow towers and
+                                            powerful
+                                            magic buildings, all designed to protect you from invasion. While defending
+                                            your
+                                            village, you may also train soldiers and heroes to form an army and invade
+                                            other
+                                            villages to plunder precious resources. The loot obtained in these invasions
+                                            will create
+                                            the foundation for your own village’s expansion and development. Make sure
+                                            you’re well
+                                            fortified for this intense and action-packed strategy adventure! Coming in
+                                            Q4
+                                            2022!<span style="margin-left: 5px;" class="less">Show Less</span></span>
+                                    </p>
+
+                                    <div class="prog">
+                                        <div class="progress"></div>
+                                    </div>
+                                </div>
+                                <h2 class="percentage"></h2>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 24rem;">
+                            <img id="game-pic" src="./Images/Legends Reborn.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="card-info">
+                                    <h2>Legends Rebon</h2>
+                                    <p> Legends Reborn is a strategic card game about building decks and taking on all challengers.
+                                        <span class="more">Read more</span>
+                                        <span class="remaining">  Amass a collection of cards and creatures which allows you to build, re-build, and tweak decks to meet any challenge that comes your way.<span style="margin-left: 5px;"
+                                                class="less">Show
+                                                Less</span></span>
+                                    </p>
+
+                                    <div class="prog">
+                                        <div class="progress"></div>
+                                    </div>
+                                </div>
+                                <h2 class="percentage"></h2>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cards">
+                        <div class="card" style="width: 24rem;">
+                            <img id="game-pic" src="./Images/Echoes of Empire.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="card-info">
+                                    <h2>Echoes of Empire</h2>
+                                    <p> Echoes of Empire is an epic, 4X sci-fi strategy game steeped in mystery, intrigue and a thousand years of Royal rule. <span class="more">Read
+                                            more</span>
+                                        <span class="remaining">
+                                            Factions warring against one another on a galactic scale, setting the stage for an upstart hero (you the player) and your meteoric ascent to power! You will recruit Heroes and Knights to your banner, while building, upgrading, and owning a fleet of starships all in an effort to bring glory to your house and control to your sector of the galaxy. Go solo or join up in massive guilds to mine or fight over resource laden star systems. Once your coffers are flush with riches and resources, muster and master all aspects of your Command Station where you can upgrade warships, craft new weapons, and repair and refit your fleets. Player ownership of in-game assets is a core mechanic, and you will have the ability to own major sectors of the galactic system and the resources that go along with it. What will you leave behind as your legacy? Find out in Echoes of Empire! 
+                                            <span style="margin-left: 5px;" class="less">Show Less</span></span>
+                                    </p>
+
+                                    <div class="prog">
+                                        <div class="progress"></div>
+                                    </div>
+                                </div>
+                                <h2 class="percentage"></h2>
+                            </div>
+                        </div>
+
+                        <div class="card" style="width: 24rem;">
+                            <img id="game-pic" src="./Images/Battle Star game.png" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <div class="card-info">
+                                    <h2>Battle Star Galatica</h2>
+                                    <p>Battlestar Galactica is a MMO 4X strategy game that takes place after The Fall.
+                                        Players find themselves scattered throughout the galaxy following the attack
+                                        from
+                                        <span class="more">Read more</span>
+                                        <span class="remaining">the Cylons with the goal of retaking their home system
+                                            as a
+                                            surviving member of one of the Twelve Colonies. Rebuild your resources,
+                                            reunite
+                                            with your faction, and reclaim the Twelve Colonies. Humanity's children are
+                                            returning home. So say we all.<span style="margin-left: 5px;"
+                                                class="less">Show
+                                                Less</span></span>
+                                    </p>
+
+                                    <div class="prog">
+                                        <div class="progress"></div>
+                                    </div>
+                                </div>
+                                <h2 class="percentage"></h2>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div id="stream">
+                <div class="status">
+                    <h1>Streaming now</h1>
+                    <input type="text">
+                </div>
+
+                <div class="container">
+                    <img id="live-banner" style="width: 100%;" src="./Images/Stram Gaming 3.jpg" alt="">
+                    <h2 class="text-white mt-3 ">Streaming live now</h2>
+                    <button style="background-color:purple; border: none;" class="btn-danger text-white p-2">Join
+                        live</button>
+                </div>
+
+                <div class="container mt-5">
+                    <div class="status">
+                        <h4 class="text-white">Other Live Stream</h4>
+                        <input type="text">
+                    </div>
+                    <div class="row d-flex">
+                        <div class="col">
+                            <img class="stream-live" style="width:100%;" src="./Images/Stram Gaming 3.jpg" alt="">
+                        </div>
+                        <div class="col">
+                            <img class="stream-live" width="100%" src="./Images/Stream Gaming.jpeg" alt="">
+                        </div>
+                        <div class="col">
+                            <img class="stream-live" style="width: 100%;" src="./Images/Stream GAming 2.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="row d-flex mt-5">
+                        <div class="col">
+                            <img class="stream-live" style="width: 100%;" src="./Images/Stream Gaming 4.jpg" alt="">
+                        </div>
+                        <div class="col">
+                            <img class="stream-live" width="100%" src="./Images/Stream GAming 5.jpg" alt="">
+                        </div>
+                        <div class="col">
+                            <img class="stream-live" style="width: 100%;" src="./Images/stram gaming 6.jpg" alt="">
+                        </div>
+                    </div>
+
+
+                    <div class="row d-flex mt-5 mb-5">
+                        <div class="col">
+                            <img class="stream-live" style="width: 100%;" src="./Images/stream Gaimg 7.jpg" alt="">
+                        </div>
+                        <div class="col">
+                            <img class="stream-live" width="100%" src="./Images/stream gaming 8.jpg" alt="">
+                        </div>
+                        <div class="col">
+                            <img class="stream-live" style="width: 100%;" src="./Images/stram gmaing 9.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="games-section">
+                <div class="status">
+                    <h1>Top Games</h1>
+                    <input type="text">
+                </div>
+
+                <div class="cards">
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/Fortitude game.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>Fortitude </h2>
+                                <p>Fortitude is a PvP tower defense game set in a dark fantasy world where players
+                                    compete
+                                    against one another to both invade and defend villages.
+                                </p>
+
+                                <div class="prog">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <h2 class="percentage"></h2>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 24rem;">
+                        <img  id="game-pic" src="./Images/Battle Star game.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>Battle Star Galatica</h2>
+                                <p>Battlestar Galactica is a MMO 4X strategy game that takes place after The Fall.
+                                </p>
+
+                                <div class="prog">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <h2 class="percentage"></h2>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/The walking dead.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>The Walking Dead</h2>
+                                <p>
+                                    The Walking Dead:Empires is a multiplayer survival game set in the treacherous world of AMC's The Walking Dead. Survive in this harsh reality by doing whatever it takes. Scavenge for supplies and construct your new home. Team up with allies, compete against maniacal foes, and always beware the dead.
+                                </p>
+
+                                <div class="prog">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <h2 class="percentage"></h2>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/Echoes of Empire.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>Echoes of Empire</h2>
+                                <p>
+                                    Echoes of Empire is an epic, 4X sci-fi strategy game steeped in mystery, intrigue and a thousand years of Royal rule. Factions warring against one another on a galactic scale, setting the stage for an upstart hero (you the player) and your meteoric ascent to power.
+                                </p>
+
+                                <div class="prog">
+                                    <div class="progress"></div>
+                                </div>
+                            </div>
+                            <h2 class="percentage"></h2>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="news">
+                <div class="status">
+                    <h1>News</h1>
+                    <input type="text">
+                </div>
+
+                <div class="cards">
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/blockchain.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>Emerald Games paves a path for blockchain games to deal in a partnership terms</h2>
+                                <p>
+                                    Emerald Games, a blockchain games startup that Emmanuel Aderibigbe help create, cut a little-noticed but very interesting promotional deal this week with Blockchain tech companies, the maker of the privacy-focused Software web browser
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 24rem;">
+                        <img  id="game-pic" src="./Images/NFT-Marketplace.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>Emerald Games is launching a public beta marketplace soon</h2>
+                                <p>Digital video game, consumer electronics, and gaming merchandise retailer Emerald Games has launched its NFT marketplace enabling gamers, creators, collectors and others to buy, sell and trade NFTs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/Axie infinity.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>P2E Gaming is in a rut, but AXS infinity(AXS) can rebound for 3 key </h2>
+                                <p>
+                                    AXS could recapture its former glory if market participants view the launch of land staking, increasing activity on the Ronin bridge and upcoming roadmap targets as bullish catalysts.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/NFT_Banner.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2> NEWS
+                                    Nifty News: NFT and Web3 gaming console to launch in 2024</h2>
+                                <p>
+                                    Chinese firms to check ID for NFT buying and more
+                                 
+                                    
+                                    The console’s creators say it will be compatible with eight blockchains and have its own digital wallet, token, and marketplace, with a prototype coming in “a few months.”
+
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+            <div class="collection">
+                <div class="status">
+                    <h1>Collections</h1>
+                    <input type="text">
+                </div>
+
+                <div class="cards">
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/warbound-clan-uncommon.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>Warbound Clan(Uncommon)</h2>
+                                <p>
+                                    One of many, tossed aside by the cruel tyranny of war. A small, but powerful group rallies to your clan’s banner, ready to fight back at a world that’s wronged them. Amzing Feature for our Fortitude Folks
+                                </p>
+                            </div>
+                            <div style="padding:10px; color:white; background-color: green; width: 60%; align-items: center; border-radius: 10px; justify-content: center;" class="price"> Buy 1320 points</div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 24rem;">
+                        <img  id="game-pic" src="./Images/elysium-land-deed-uncommon.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>Elysium Land Deed Uncommon</h2>
+                                <p>This Uncommon Land Deed will be exchangeable for a Uncommon Land Plot (ERC-721) on planet Elysium. The owner’s Land location will be revealed following the exchange.
+                                </p>
+                            </div>
+                            <div style="padding:10px; color:white; background-color: green; width: 60%; align-items: center; border-radius: 10px; justify-content: center;" class="price">Buy 2500 points</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="cards">
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/arrow-tower-lv-1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2>Arroe Tower Level 1</h2>
+                                <p>
+                                    Send volley after volley of arrows against your attackers!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" style="width: 24rem;">
+                        <img id="game-pic" src="./Images/elite-ritual-stone-epic.gif" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <div class="card-info">
+                                <h2> Elite Ritual Stone (Epic)</h2>
+                                <p>
+                                    A pre-constructed and primed ritual stone capable of forging a small group of fully functional creature tokens. No expense has been spared in the creation of this piece of arcana, allowing the harnessing of extremely powerful essence and the creation of the best tokens money can buy
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+        </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

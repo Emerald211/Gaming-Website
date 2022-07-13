@@ -1,0 +1,579 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 4;
+    /* visibility: hidden; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.show {
+    animation: vanish 5s forwards;
+}
+
+@keyframes vanish {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+/* loader */
+.water{
+    width:100px;
+    height: 100px;
+    background-color: skyblue;
+    border-radius: 50%;
+    position: relative;
+    box-shadow: inset 0 0 30px 0 rgba(0,0,0,.5), 0 4px 10px 0 rgba(0,0,0,.5);
+    overflow: hidden;
+}
+.water:before, .water:after{
+    content:'';
+    position: absolute;
+    width:100px;
+    height: 100px;
+    top:-50px;
+    background-color: #fff;
+}
+.water:before{
+    border-radius: 45%;
+    background:rgba(255,255,255,.7);
+    animation:wave 5s linear infinite;
+}
+.water:after{
+    border-radius: 35%;
+    background:rgba(255,255,255,.3);
+    animation:wave 5s linear infinite;
+}
+@keyframes wave{
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* loader */
+body {
+    margin: 0;
+    background-color: rgb(37, 37, 37);
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+ 
+}
+
+.container-fluid {
+    display: flex;
+    width: 100vw;
+    background: white;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.1), rgba(255,255,255,0.2));
+    backdrop-filter: blur(2rem);
+    padding: 0 !important;
+    z-index: 2;
+
+}
+
+
+.dashboard {
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.8), rgba(255,255,255,0.2));
+    border-radius: 20px;
+    display: flex;
+    height: 100%;
+    padding: 20px 0;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    
+}
+
+.user h3{
+    color: purple;
+    font-size: 1.3rem;
+    font-family: 'Arima', cursive;
+    margin-top: 10px;
+}
+
+.user p {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif !important;
+}
+
+.link {
+    display: flex;
+    margin: 50px;
+    align-items: center !important;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.link:hover {
+    transform: scale(1.1);
+    padding: 10px;
+}
+
+.link h3 {
+    margin-left: 2rem;
+    margin-bottom: 0 !important;
+    color: purple;
+    font-family:'Arima', cursive ;
+}
+
+#premium {
+    display: flex;
+    align-items: center;
+    background-color: purple;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    position: absolute;
+    bottom: 5%;
+}
+
+#premium h3 {
+    margin-left: 1rem;
+    font-family: 'Arima', cursive;
+    margin-bottom: 0 !important;
+}
+
+.Games {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    padding: 30px;
+
+}
+
+.status {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+.status h1 {
+    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.3rem;
+    margin-bottom: 10px;
+}
+
+.status input {
+    border-radius: 20px;
+    height: 20px;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.2));
+    border: none;
+    width: 50%;
+    padding: 0.5rem;
+}
+
+#game-pic {
+    width: 100%;
+}
+
+.cards {
+    display: flex;
+    align-items: center;
+}
+
+
+.card {
+    background: none !important;
+    transition: all 0.5s;
+    margin: 10px;
+    box-shadow: 2px 2px 10px white;
+}
+
+.card img {
+    width: fit-content;
+    height: fit-content;
+}
+
+.card:hover{
+    transform: scale(0.97);
+}
+
+.card h2 {
+    color: white;
+     font-family: 'Arima', cursive;
+     text-decoration: underline;
+     font-size: 1.2rem !important;
+}
+
+.card p {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: left;
+    color: white;
+    font-size: 0.7rem !important;
+}
+
+.more, .less {
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.remaining {
+    display: none;
+}
+.prog{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 1rem;
+    height: 20px;
+    background: linear-gradient(to right bottom, rgba(255,255,255,0.2), rgba(255,255,255,0.2));
+}
+.progress {
+    background: purple;
+    width: 90%;
+    height: 20px;
+    border-radius: 1rem;
+}
+
+.percentage{
+    text-decoration: none !important;
+}
+
+.show-more-games{
+    display: flex;
+    justify-content: center;
+    align-items: center !important;
+    width: 150px;
+    height: 30px;
+    align-self: center;
+    background-color: purple;
+    color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    
+}
+
+.show-more-games h6 {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.menu{
+    display: none;
+}
+
+.nav {
+    margin-left: auto;
+    width: 50px !important;
+}
+
+.sidenav {
+    display: none;
+}
+
+.more-games {
+    display: none;
+    
+}
+
+.middle {
+    display: none;
+    align-self: center;
+    margin-top: 20px;
+}
+.bar {
+  width: 5px;
+  height: 30px;
+  background: #fff;
+  display: inline-block;
+  transform-origin: bottom center;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+  /*   box-shadow:5px 10px 20px inset rgba(255,23,25.2); */
+  animation: loader 1.2s linear infinite;
+}
+.bar1 {
+  animation-delay: 0.1s;
+}
+.bar2 {
+  animation-delay: 0.2s;
+}
+.bar3 {
+  animation-delay: 0.3s;
+}
+.bar4 {
+  animation-delay: 0.4s;
+}
+.bar5 {
+  animation-delay: 0.5s;
+}
+.bar6 {
+  animation-delay: 0.6s;
+}
+.bar7 {
+  animation-delay: 0.7s;
+}
+.bar8 {
+  animation-delay: 0.8s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scaleY(0.1);
+    
+  }
+  50% {
+    transform: scaleY(1);
+    background: rgb(155, 7, 143);
+  }
+  100% {
+    transform: scaleY(0.1);
+    background: transparent;
+  }
+}
+
+.container img {
+    border-radius: 20px !important;
+}
+
+.Active-games {
+    display: flex;
+    flex-direction: column;
+}
+
+.games-section {
+    display: none;
+    flex-direction: column;
+}
+
+#stream{
+    display: none;
+}
+
+.news {
+    display: none;
+}
+
+.collection {
+    display: none;
+}
+
+
+@media screen and (max-width:680px) {
+    .cards{
+        flex-direction: column;
+    }
+    .card {
+        width: 18rem !important;
+    }
+.card h2 {
+    font-size:  1rem !important;
+} 
+    .status h1 {
+        font-size: 1rem !important;
+    }
+
+    .dashboard{
+        display: none;
+    }
+    .link:hover {
+        border-left: 2px solid purple;
+    }
+    .menu {
+        display: flex;
+    }
+
+    .user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center !important;
+    }
+    .user img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #premium {
+        display: flex;
+        align-items: center;
+        background-color: purple;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        position: unset;
+        bottom: none;
+    }
+    .sidenav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+      height: 100%; /* 100% Full-height */
+      width: 0; /* 0 width - change this with JavaScript */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Stay on top */
+      top: 0; /* Stay at the top */
+      right: 0;
+      background: linear-gradient(to right bottom, rgba(255,255,255,1), rgba(255,255,255,0.8));
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    
+    /* The navigation menu links */
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+}
+
+@media screen and (min-width: 681px) and (max-width: 940px) {
+    .cards{
+        justify-content: center;
+    }
+    .card {
+        width: 18rem !important;
+    }
+
+    .status h1 {
+        font-size: 1rem !important;
+    }
+
+    .dashboard{
+        display: none;
+    }
+    .link:hover {
+        border-right: 2px solid purple;
+    }
+    .menu {
+        display: flex;
+    }
+
+    .user {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center !important;
+    }
+    .user img {
+        width: 50px;
+        height: 50px;
+    }
+
+    #premium {
+        display: flex;
+        align-items: center;
+        background-color: purple;
+        padding: 20px;
+        border-radius: 10px;
+        color: white;
+        position: unset;
+        bottom: none;
+    }
+    .sidenav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* justify-content: center; */
+      height: 100%; /* 100% Full-height */
+      width: 0; /* 0 width - change this with JavaScript */
+      position: fixed; /* Stay in place */
+      z-index: 1; /* Stay on top */
+      top: 0; /* Stay at the top */
+      right: 0;
+      
+      background: linear-gradient(to right bottom, rgba(255,255,255,1), rgba(255,255,255,0.8));
+      overflow-x: hidden; /* Disable horizontal scroll */
+      padding-top: 60px; /* Place content 60px from the top */
+      transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+    }
+    
+    /* The navigation menu links */
+    .sidenav a {
+      padding: 8px 8px 8px 32px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+      transition: 0.3s;
+    }
+    
+    /* When you mouse over the navigation links, change their color */
+    .sidenav a:hover {
+      color: #f1f1f1;
+    }
+    
+    /* Position and style the close button (top right corner) */
+    .sidenav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+    }
+
+    
+    /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+    @media screen and (max-height: 450px) {
+      .sidenav {padding-top: 15px;}
+      .sidenav a {font-size: 18px;}
+    }
+
+}
+
+
+@media screen and (min-width:941px) and (max-width:1150px) {
+    .card {
+        width: 18rem !important;
+    }
+
+    .Games {
+        padding: 20px !important;
+    }
+}
+
+@media screen and (min-width: 240px) and (max-width:345px) {
+    .card {
+        width: 13rem !important;
+    }
+}
