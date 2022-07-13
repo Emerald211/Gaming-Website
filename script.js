@@ -2,11 +2,14 @@ const loader = document.querySelector(".loader")
 const container = document.querySelector(".container-fluid")
 function vanish() {
     container.style.display = "none"
+     
     loader.classList.add("show")
 
     setInterval(function gg() {
-        container.style.display = "flex"        
-    }, 4000)
+        container.style.display = "flex"  
+    }, 5000)
+
+   
 
     gg();
 }
