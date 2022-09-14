@@ -5,7 +5,7 @@
 
 
 
-### GAMING WEBSITE
+### GAMING WEBSITE .
 
 This is a Simple gaming website built with vanilla.js 
 
